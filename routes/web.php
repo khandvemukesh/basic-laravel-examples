@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home');
+});
+
+
+
 //               ********* Laravel Route Contraints *********
 // Route::get('/news/{id?}/comment/{commentId}', function (string $id=null, string $commentId=null) {
 //      if($id){
@@ -16,18 +19,18 @@ Route::get('/', function () {
 
 // Laravel Name Routes
 
-Route::get('/about-us', function() {
-           return view('about');   
-})->name('about');
-Route::get('/news', function() {
-           return view('news');     
-})->name('news');
+// Route::get('/about-us', function() {
+//            return view('about');   
+// })->name('about');
+// Route::get('/news', function() {
+//            return view('news');     
+// })->name('news');
 
 //Redirect Page to Another WebPage
-Route::redirect('/about-us', '/test');
+// Route::redirect('/about-us', '/test');
 
 // Route::view('/news', 'news');
 
-Route::fallback(function(){
-  return '<h2> Page Not Found!</h2>';
-});
+// Route::fallback(function(){
+//   return '<h2> Page Not Found!</h2>';
+// });
