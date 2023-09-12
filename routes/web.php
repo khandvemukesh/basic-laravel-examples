@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
 Route::get('/service', function () {
     return view('service');
@@ -19,6 +20,19 @@ Route::get('/blog', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
+// How Declare Controller In Routes
+
+Route::controller(PageController::class)->group(function () {
+Route::get('/demo', 'show')->name('demo');
+Route::get('/blog', 'showBlog')->name('blog');
+Route::get('/about/{id?}', 'showAbout')->name('about');
+
+});
+
+
+
 
 
 
