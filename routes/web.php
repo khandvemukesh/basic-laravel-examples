@@ -2,10 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class,'showUsers'])->name('home');
+Route::get('/user/{id}', [UserController::class,'showUserSingleRecord'])->name('view.user');
+Route::get('/add', [UserController::class,'addUser']);
+Route::get('/updateuser', [UserController::class,'updateUser']);
+Route::get('/deleteuser/{id}', [UserController::class,'deleteUser'])->name('view.delete');
 // Route::get('/about', function () {
 //     return view('about');
 // });
@@ -30,6 +33,7 @@ Route::get('/blog', 'showBlog')->name('blog');
 Route::get('/about/{id?}', 'showAbout')->name('about');
 
 });
+
 
 
 

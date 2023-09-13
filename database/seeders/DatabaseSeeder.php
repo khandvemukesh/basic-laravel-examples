@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\student;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+  
         $this->call([
-            StudentSeeder::class,
+            // StudentSeeder::class,
             // LibariesSeeder::class
+            UserSeeder::class
         ]);
+        // student::factory()->count(2)->create();
             
         
         // \App\Models\User::factory(10)->create();

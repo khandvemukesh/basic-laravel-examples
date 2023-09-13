@@ -1,0 +1,38 @@
+[
+     {        
+        "name":"Mukesh Khandve",
+        "email":"mukeshkhandve@gmail.com",
+        "age":25,
+        "city":"Pune"
+    },
+     {        
+        "name":"umesh Khandve",
+        "email":"umeshkhandve@gmail.com",
+        "age":30,
+        "city":"bhopal"
+    },
+    {        
+        "name":"Khandve Khandve Bhawser",
+        "email":"khandvekhandve@gmail.com",
+        "age":28,
+        "city":"betul"
+    },
+    {        
+        "name":"Sindhu Khandve",
+        "email":"Sindhukhandve@gmail.com",
+        "age":55,
+        "city":"bhopal"
+    }
+     ,{        
+        "name":"ram Khandve",
+        "email":"abc@gmail.com",
+        "age":34,
+        "city":"bhopal"
+    },
+    {        
+        "name":"harshi Khandve",
+        "email":"abcd@gmail.com",
+        "age":34,
+        "city":"bhopal"
+    }
+]
