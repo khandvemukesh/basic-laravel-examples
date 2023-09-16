@@ -1,0 +1,21 @@
+[
+   
+    {        
+        "name":"Harshit",
+        "email":"dudey@gmail.com",
+        "age":34,
+        "city":5
+    },
+    {        
+        "name":"harshi Khandve",
+        "email":"abcd@gmail.com",
+        "age":34,
+        "city":5
+    },
+     {        
+        "name":"Robin Bhola",
+        "email":"robinbhola@gmail.com",
+        "age":38,
+        "city":4
+    }
+]

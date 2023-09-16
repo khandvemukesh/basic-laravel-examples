@@ -3,16 +3,22 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\JoinTableController;
+use App\Http\Controllers\UnionTableController;
 
-Route::get('/', [UserController::class,'showUsers'])->name('home');
-Route::get('/user/{id}', [UserController::class,'showUserSingleRecord'])->name('view.user');
-Route::get('/add', [UserController::class,'addUser']);
-Route::get('/updateuser', [UserController::class,'updateUser']);
-Route::get('/deleteuser/{id}', [UserController::class,'deleteUser'])->name('view.delete');
+Route::get('/tableTwoJoin', [JoinTableController::class,'showCityAndUser']);
+Route::get('/tableTwoUnion', [UnionTableController::class,'showUnionAndTwo']);
+Route::controller(UserController::class)->group(function () {
+Route::get('/','showUsers')->name('home');
+Route::get('/user/{id}', 'showUserSingleRecord')->name('view.user');
+Route::post('/add','addUser')->name('addUser');
+Route::post('/updateuser/{id}', 'updateUser')->name('user.update');
+Route::get('/updatepage/{id}', 'updatePage')->name('view.updatePage');
+Route::get('/deleteuser/{id}', 'deleteUser')->name('view.delete');});
 // Route::get('/about', function () {
 //     return view('about');
 // });
-
+Route::view('addUser', '/addUser');
 Route::get('/service', function () {
     return view('service');
 });
